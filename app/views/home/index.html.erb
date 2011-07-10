@@ -1,2 +1,9 @@
 <h1>Sound Cloud Battle</h1>
 <p>A Battle Arena for Sound Clouders</p>
+
+<% if current_user %>
+  Welcome <%= current_user.name %>!
+  <%= link_to "Sign Out", signout_path %>
+<% else %>
+  <%= link_to "Sign in with Twitter", "/auth/twitter" %>
+<% end %>

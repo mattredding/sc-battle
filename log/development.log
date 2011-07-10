@@ -1,0 +1,1028 @@
+DEPRECATION WARNING: config.action_view.debug_rjs will be removed in 3.1, from 3.1 onwards you will need to install prototype-rails to continue to use RJS templates . (called from handle at /Users/matt/Library/Application Support/Pow/Versions/0.3.1/node_modules/nack/lib/nack/server.rb:146)
+
+
+Started GET "/" for 127.0.0.1 at 2011-07-10 11:59:06 +0900
+  Processing by HomeController#index as HTML
+Rendered home/index.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 8ms (Views: 7.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/auth/twitter" for 127.0.0.1 at 2011-07-10 11:59:30 +0900
+
+
+Started GET "/auth/twitter/callback?oauth_token=rd9AmRk10JIJHr6jjNi2n4PZxAglL2IeXdxn3IlyBwo&oauth_verifier=ulKSiSApSR8Zmy3AkCVgtCxNyiPM8cFdI4Xl00dau4" for 127.0.0.1 at 2011-07-10 11:59:39 +0900
+
+ActionController::RoutingError (No route matches "/auth/twitter/callback"):
+  
+
+Rendered /Users/matt/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.2ms)
+
+
+Started GET "/auth/twitter" for 127.0.0.1 at 2011-07-10 12:02:57 +0900
+
+
+Started GET "/auth/twitter/callback?oauth_token=Zu11TNFzPhER32xMY5O0MF4bcCdvt11FHX2PuWXYOc&oauth_verifier=IxvWcPwOJhERK1iSjCegVPp4N23L5UdZa6a8EKwq8" for 127.0.0.1 at 2011-07-10 12:02:59 +0900
+  Processing by SessionsController#create as HTML
+  Parameters: {"oauth_token"=>"Zu11TNFzPhER32xMY5O0MF4bcCdvt11FHX2PuWXYOc", "oauth_verifier"=>"IxvWcPwOJhERK1iSjCegVPp4N23L5UdZa6a8EKwq8", "provider"=>"twitter"}
+Completed 500 Internal Server Error in 0ms
+
+TypeError (exception class/object expected):
+  app/controllers/sessions_controller.rb:3:in `raise'
+  app/controllers/sessions_controller.rb:3:in `create'
+
+Rendered /Users/matt/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.3ms)
+Rendered /Users/matt/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (35.5ms)
+Rendered /Users/matt/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (42.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2011-07-10 12:04:13 +0900
+  Processing by HomeController#index as HTML
+Rendered home/index.html.erb within layouts/application (1.8ms)
+Completed 200 OK in 7ms (Views: 7.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/auth/twitter" for 127.0.0.1 at 2011-07-10 12:04:15 +0900
+
+
+Started GET "/auth/twitter/callback?oauth_token=JyRdL3379u1JGwheg1VCfkbdtcVx553Lrg59w4JM270&oauth_verifier=WPkovyWRgsREeAkzKinh3246R9z4SmTyzj8EbAT6rU" for 127.0.0.1 at 2011-07-10 12:04:16 +0900
+  Processing by SessionsController#create as HTML
+  Parameters: {"oauth_token"=>"JyRdL3379u1JGwheg1VCfkbdtcVx553Lrg59w4JM270", "oauth_verifier"=>"WPkovyWRgsREeAkzKinh3246R9z4SmTyzj8EbAT6rU", "provider"=>"twitter"}
+Completed 500 Internal Server Error in 13ms
+
+RuntimeError (---
+provider: twitter
+uid: '19380272'
+credentials:
+  token: 19380272-PY3VShSu8ZjFNBYizaMLKGP267GRPI4KooefPXdFc
+  secret: pQR2t6qFZSdBCEpn7QCxlKWFoaIbWlJ9ENsN3gj6A
+extra:
+  access_token: !ruby/object:OAuth::AccessToken
+    token: 19380272-PY3VShSu8ZjFNBYizaMLKGP267GRPI4KooefPXdFc
+    secret: pQR2t6qFZSdBCEpn7QCxlKWFoaIbWlJ9ENsN3gj6A
+    consumer: !ruby/object:OAuth::Consumer
+      key: fVmohsS3LBUSZbG5ciweHA
+      secret: eaQFzHQMQiJo91FpqAer4G5rkpGuggGRfQUPLfaNx5s
+      options:
+        :signature_method: HMAC-SHA1
+        :request_token_path: /oauth/request_token
+        :authorize_path: /oauth/authenticate
+        :access_token_path: /oauth/access_token
+        :proxy: !!null 
+        :scheme: :header
+        :http_method: :post
+        :oauth_version: '1.0'
+        :site: https://api.twitter.com
+      http: !ruby/object:Net::HTTP
+        address: api.twitter.com
+        port: 443
+        curr_http_version: '1.1'
+        no_keepalive_server: false
+        close_on_empty_response: false
+        socket: !!null 
+        started: false
+        open_timeout: 30
+        read_timeout: 30
+        debug_output: !!null 
+        use_ssl: true
+        ssl_context: !ruby/object:OpenSSL::SSL::SSLContext
+          cert: !!null 
+          key: !!null 
+          client_ca: !!null 
+          ca_file: !!null 
+          ca_path: !!null 
+          timeout: !!null 
+          verify_mode: 0
+          verify_depth: !!null 
+          verify_callback: !!null 
+          options: 4095
+          cert_store: !!null 
+          extra_chain_cert: !!null 
+          client_cert_cb: !!null 
+          tmp_dh_callback: !!null 
+          session_id_context: !!null 
+          session_get_cb: !!null 
+          session_new_cb: !!null 
+          session_remove_cb: !!null 
+          servername_cb: !!null 
+        enable_post_connection_check: true
+        compression: !!null 
+        sspi_enabled: false
+        ssl_version: !!null 
+        key: !!null 
+        cert: !!null 
+        ca_file: !!null 
+        ca_path: !!null 
+        cert_store: !!null 
+        ciphers: !!null 
+        verify_mode: 0
+        verify_callback: !!null 
+        verify_depth: !!null 
+        ssl_timeout: !!null 
+        newimpl: true
+      http_method: :post
+      uri: !ruby/object:URI::HTTPS
+        scheme: https
+        user: !!null 
+        password: !!null 
+        host: api.twitter.com
+        port: 443
+        path: ''
+        query: !!null 
+        opaque: !!null 
+        registry: !!null 
+        fragment: !!null 
+        parser: !!null 
+    params:
+      :oauth_token: 19380272-PY3VShSu8ZjFNBYizaMLKGP267GRPI4KooefPXdFc
+      oauth_token: 19380272-PY3VShSu8ZjFNBYizaMLKGP267GRPI4KooefPXdFc
+      :oauth_token_secret: pQR2t6qFZSdBCEpn7QCxlKWFoaIbWlJ9ENsN3gj6A
+      oauth_token_secret: pQR2t6qFZSdBCEpn7QCxlKWFoaIbWlJ9ENsN3gj6A
+      :user_id: '19380272'
+      user_id: '19380272'
+      :screen_name: Control__Freak
+      screen_name: Control__Freak
+    response: !ruby/object:Net::HTTPOK
+      http_version: '1.1'
+      code: '200'
+      message: OK
+      header:
+        date:
+        - Sun, 10 Jul 2011 03:04:18 GMT
+        server:
+        - hi
+        status:
+        - 200 OK
+        x-transaction:
+        - 1310267058-15834-20822
+        x-ratelimit-limit:
+        - '350'
+        etag:
+        - ! '"293cdedc083d8bff6813891a8d802934"'
+        x-frame-options:
+        - SAMEORIGIN
+        last-modified:
+        - Sun, 10 Jul 2011 03:04:18 GMT
+        x-ratelimit-remaining:
+        - '347'
+        x-runtime:
+        - '0.01937'
+        x-transaction-mask:
+        - a6183ffa5f8ca943ff1b53b5644ef114f5555dde
+        content-type:
+        - application/json; charset=utf-8
+        content-length:
+        - '1947'
+        pragma:
+        - no-cache
+        x-access-level:
+        - read-write
+        x-ratelimit-class:
+        - api_identified
+        x-revision:
+        - DEV
+        expires:
+        - Tue, 31 Mar 1981 05:00:00 GMT
+        cache-control:
+        - no-cache, no-store, must-revalidate, pre-check=0, post-check=0
+        x-mid:
+        - e32bd6d14fedc21bdefdfaf2c5806a8d20bb0fb4
+        x-ratelimit-reset:
+        - '1310270380'
+        set-cookie:
+        - k=221.191.101.65.1310267058304724; path=/; expires=Sun, 17-Jul-11 03:04:18
+          GMT; domain=.twitter.com
+        - guest_id=v1%3A131026705830713697; domain=.twitter.com; path=/; expires=Tue,
+          09 Jul 2013 15:04:18 GMT
+        - lang=en; path=/
+        - twid=u%3D19380272%7CTV6k9RIBFkrzzI14kUCZA88cIrs%3D; domain=.twitter.com;
+          path=/
+        - _twitter_sess=BAh7CToMY3NyZl9pZCIlYjcwZDE3MmVlZTY1NTg5MTBmMTNlZWIzZGQ3NTBl%250ANjU6B2lkIiVkZTAyM2U1NTM0NTBlNjViZDVlNjZlZDI0ZTYxZTQ2MjoPY3Jl%250AYXRlZF9hdGwrCIyoABIxASIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6%250ARmxhc2g6OkZsYXNoSGFzaHsABjoKQHVzZWR7AA%253D%253D--329677ee520e770fdc50e135b7b296fe9cd40b42;
+          domain=.twitter.com; path=/; HttpOnly
+        vary:
+        - Accept-Encoding
+        connection:
+        - close
+      body: ! '{"statuses_count":1614,"protected":false,"profile_text_color":"333333","name":"Control
+        Freak Matt","profile_sidebar_fill_color":"DDFFCC","id_str":"19380272","default_profile":false,"listed_count":15,"profile_background_tile":false,"utc_offset":32400,"profile_image_url":"http:\/\/a0.twimg.com\/profile_images\/87423776\/logo_bw_normal.jpg","following":false,"description":"LAPTOP
+        BATTLE TOKYO VOL.6\r\n6\u670822\u65e5 June 22nd\r\nhttp:\/\/www.laptopbattle.jp","location":"Tokyo","verified":false,"profile_background_image_url_https":"https:\/\/si0.twimg.com\/profile_background_images\/4024561\/camo2.png","profile_link_color":"0084B4","followers_count":268,"screen_name":"Control__Freak","status":{"place":null,"in_reply_to_user_id":null,"retweet_count":0,"id_str":"89305415996805121","geo":null,"favorited":false,"text":"My
+        Top 3 #lastfm Artists: Muffler (2), Nero (2) & Noisia (2) http:\/\/bit.ly\/91Hb0n","in_reply_to_status_id_str":null,"in_reply_to_screen_name":null,"in_reply_to_user_id_str":null,"coordinates":null,"truncated":false,"contributors":null,"retweeted":false,"id":89305415996805121,"source":"\u003Ca
+        href=\"http:\/\/www.tweekly.fm\/\" rel=\"nofollow\"\u003ETweekly.fm\u003C\/a\u003E","created_at":"Fri
+        Jul 08 12:10:45 +0000 2011","in_reply_to_status_id":null},"profile_sidebar_border_color":"BDDCAD","url":"http:\/\/www.basshaemorrhage.com","profile_image_url_https":"https:\/\/si0.twimg.com\/profile_images\/87423776\/logo_bw_normal.jpg","default_profile_image":false,"time_zone":"Tokyo","id":19380272,"show_all_inline_media":true,"contributors_enabled":false,"geo_enabled":false,"notifications":false,"profile_use_background_image":true,"favourites_count":2,"created_at":"Fri
+        Jan 23 03:58:23 +0000 2009","is_translator":false,"profile_background_color":"9AE4E8","follow_request_sent":false,"lang":"en","profile_background_image_url":"http:\/\/a1.twimg.com\/profile_background_images\/4024561\/camo2.png","friends_count":268}'
+      read: true
+      socket: !!null 
+      body_exist: true
+  user_hash:
+    statuses_count: 1614
+    protected: false
+    profile_text_color: '333333'
+    name: Control Freak Matt
+    profile_sidebar_fill_color: DDFFCC
+    id_str: '19380272'
+    default_profile: false
+    listed_count: 15
+    profile_background_tile: false
+    utc_offset: 32400
+    profile_image_url: http://a0.twimg.com/profile_images/87423776/logo_bw_normal.jpg
+    following: false
+    description: ! "LAPTOP BATTLE TOKYO VOL.6\r\n6月22日 June 22nd\r\nhttp://www.laptopbattle.jp"
+    location: Tokyo
+    verified: false
+    profile_background_image_url_https: https://si0.twimg.com/profile_background_images/4024561/camo2.png
+    profile_link_color: 0084B4
+    followers_count: 268
+    screen_name: Control__Freak
+    status:
+      place: !!null 
+      in_reply_to_user_id: !!null 
+      retweet_count: 0
+      id_str: '89305415996805121'
+      geo: !!null 
+      favorited: false
+      text: ! 'My Top 3 #lastfm Artists: Muffler (2), Nero (2) & Noisia (2) http://bit.ly/91Hb0n'
+      in_reply_to_status_id_str: !!null 
+      in_reply_to_screen_name: !!null 
+      in_reply_to_user_id_str: !!null 
+      coordinates: !!null 
+      truncated: false
+      contributors: !!null 
+      retweeted: false
+      id: 89305415996805121
+      source: <a href="http://www.tweekly.fm/" rel="nofollow">Tweekly.fm</a>
+      created_at: Fri Jul 08 12:10:45 +0000 2011
+      in_reply_to_status_id: !!null 
+    profile_sidebar_border_color: BDDCAD
+    url: http://www.basshaemorrhage.com
+    profile_image_url_https: https://si0.twimg.com/profile_images/87423776/logo_bw_normal.jpg
+    default_profile_image: false
+    time_zone: Tokyo
+    id: 19380272
+    show_all_inline_media: true
+    contributors_enabled: false
+    geo_enabled: false
+    notifications: false
+    profile_use_background_image: true
+    favourites_count: 2
+    created_at: Fri Jan 23 03:58:23 +0000 2009
+    is_translator: false
+    profile_background_color: 9AE4E8
+    follow_request_sent: false
+    lang: en
+    profile_background_image_url: http://a1.twimg.com/profile_background_images/4024561/camo2.png
+    friends_count: 268
+user_info:
+  nickname: Control__Freak
+  name: Control Freak Matt
+  location: Tokyo
+  image: http://a0.twimg.com/profile_images/87423776/logo_bw_normal.jpg
+  description: ! "LAPTOP BATTLE TOKYO VOL.6\r\n6月22日 June 22nd\r\nhttp://www.laptopbattle.jp"
+  urls:
+    Website: http://www.basshaemorrhage.com
+    Twitter: http://twitter.com/Control__Freak
+):
+  app/controllers/sessions_controller.rb:3:in `create'
+
+Rendered /Users/matt/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.3ms)
+Rendered /Users/matt/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (7.1ms)
+Rendered /Users/matt/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (12.7ms)
+  [1m[36mSQL (0.6ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.1ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (0.1ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations"[0m
+Migrating to CreateUsers (20110710030520)
+  [1m[35mSQL (0.1ms)[0m  select sqlite_version(*)
+  [1m[36mSQL (8.0ms)[0m  [1mCREATE TABLE "users" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "provider" varchar(255), "uid" varchar(255), "name" varchar(255), "created_at" datetime, "updated_at" datetime) [0m
+  [1m[35mSQL (11.3ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ('20110710030520')
+  [1m[36mSQL (0.2ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.1ms)[0m  SELECT "schema_migrations"."version" FROM "schema_migrations"
+  [1m[36mSQL (0.1ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.0ms)[0m  PRAGMA index_list("users")
+
+
+Started GET "/" for 127.0.0.1 at 2011-07-10 12:07:57 +0900
+  Processing by HomeController#index as HTML
+Rendered home/index.html.erb within layouts/application (1.9ms)
+Completed 200 OK in 7ms (Views: 6.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2011-07-10 12:08:00 +0900
+  Processing by HomeController#index as HTML
+Rendered home/index.html.erb within layouts/application (1.8ms)
+Completed 200 OK in 36ms (Views: 5.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/auth/twitter" for 127.0.0.1 at 2011-07-10 12:08:03 +0900
+
+
+Started GET "/auth/twitter/callback?oauth_token=PUgSMmAram5nQnvqsueVzrthm7cJDhz4NCoTVvnZI8&oauth_verifier=XcYCV5NUjPkOB6eoPbkiZzTGOeuH1po7CjutfbTko" for 127.0.0.1 at 2011-07-10 12:08:04 +0900
+  Processing by SessionsController#create as HTML
+  Parameters: {"oauth_token"=>"PUgSMmAram5nQnvqsueVzrthm7cJDhz4NCoTVvnZI8", "oauth_verifier"=>"XcYCV5NUjPkOB6eoPbkiZzTGOeuH1po7CjutfbTko", "provider"=>"twitter"}
+Completed 500 Internal Server Error in 5ms
+
+NameError (uninitialized constant SessionsController::User):
+  app/controllers/sessions_controller.rb:5:in `create'
+
+Rendered /Users/matt/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.4ms)
+Rendered /Users/matt/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (6.5ms)
+Rendered /Users/matt/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (12.8ms)
+
+
+Started GET "/" for 127.0.0.1 at 2011-07-10 12:08:52 +0900
+  Processing by HomeController#index as HTML
+Rendered home/index.html.erb within layouts/application (1.7ms)
+Completed 200 OK in 6ms (Views: 5.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/auth/twitter" for 127.0.0.1 at 2011-07-10 12:08:53 +0900
+
+
+Started GET "/auth/twitter/callback?oauth_token=AqLglNOqFKwGYhGLgv1sYZLFTAbOdxfhIkroDWzDk0&oauth_verifier=LTPvOyBGoPMz4SGkcb5vaZF5teRFrwIG6laUdrsyo" for 127.0.0.1 at 2011-07-10 12:08:55 +0900
+  Processing by SessionsController#create as HTML
+  Parameters: {"oauth_token"=>"AqLglNOqFKwGYhGLgv1sYZLFTAbOdxfhIkroDWzDk0", "oauth_verifier"=>"LTPvOyBGoPMz4SGkcb5vaZF5teRFrwIG6laUdrsyo", "provider"=>"twitter"}
+Completed 500 Internal Server Error in 5ms
+
+NameError (uninitialized constant SessionsController::User):
+  app/controllers/sessions_controller.rb:5:in `create'
+
+Rendered /Users/matt/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/_trace.erb (32.1ms)
+Rendered /Users/matt/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (6.5ms)
+Rendered /Users/matt/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (42.6ms)
+
+
+Started GET "/auth/twitter/callback?oauth_token=AqLglNOqFKwGYhGLgv1sYZLFTAbOdxfhIkroDWzDk0&oauth_verifier=LTPvOyBGoPMz4SGkcb5vaZF5teRFrwIG6laUdrsyo" for 127.0.0.1 at 2011-07-10 12:09:23 +0900
+
+
+Started GET "/auth/failure?message=invalid_credentials" for 127.0.0.1 at 2011-07-10 12:09:24 +0900
+
+ActionController::RoutingError (No route matches "/auth/failure"):
+  
+
+Rendered /Users/matt/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.1ms)
+
+
+Started GET "/" for 127.0.0.1 at 2011-07-10 12:09:30 +0900
+  Processing by HomeController#index as HTML
+Rendered home/index.html.erb within layouts/application (1.7ms)
+Completed 200 OK in 6ms (Views: 5.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/auth/twitter" for 127.0.0.1 at 2011-07-10 12:09:31 +0900
+
+
+Started GET "/auth/twitter/callback?oauth_token=PbWlM9siyRvn6IIRWCFYRq8s4NiQ20GbSdsZ807bo&oauth_verifier=GdQ5l0D7fY3XAOd907bc89lXMJyVFmykfRqKpedKdiQ" for 127.0.0.1 at 2011-07-10 12:09:32 +0900
+  Processing by SessionsController#create as HTML
+  Parameters: {"oauth_token"=>"PbWlM9siyRvn6IIRWCFYRq8s4NiQ20GbSdsZ807bo", "oauth_verifier"=>"GdQ5l0D7fY3XAOd907bc89lXMJyVFmykfRqKpedKdiQ", "provider"=>"twitter"}
+Completed 500 Internal Server Error in 13ms
+
+RuntimeError (---
+provider: twitter
+uid: '19380272'
+credentials:
+  token: 19380272-PY3VShSu8ZjFNBYizaMLKGP267GRPI4KooefPXdFc
+  secret: pQR2t6qFZSdBCEpn7QCxlKWFoaIbWlJ9ENsN3gj6A
+extra:
+  access_token: !ruby/object:OAuth::AccessToken
+    token: 19380272-PY3VShSu8ZjFNBYizaMLKGP267GRPI4KooefPXdFc
+    secret: pQR2t6qFZSdBCEpn7QCxlKWFoaIbWlJ9ENsN3gj6A
+    consumer: !ruby/object:OAuth::Consumer
+      key: fVmohsS3LBUSZbG5ciweHA
+      secret: eaQFzHQMQiJo91FpqAer4G5rkpGuggGRfQUPLfaNx5s
+      options:
+        :signature_method: HMAC-SHA1
+        :request_token_path: /oauth/request_token
+        :authorize_path: /oauth/authenticate
+        :access_token_path: /oauth/access_token
+        :proxy: !!null 
+        :scheme: :header
+        :http_method: :post
+        :oauth_version: '1.0'
+        :site: https://api.twitter.com
+      http: !ruby/object:Net::HTTP
+        address: api.twitter.com
+        port: 443
+        curr_http_version: '1.1'
+        no_keepalive_server: false
+        close_on_empty_response: false
+        socket: !!null 
+        started: false
+        open_timeout: 30
+        read_timeout: 30
+        debug_output: !!null 
+        use_ssl: true
+        ssl_context: !ruby/object:OpenSSL::SSL::SSLContext
+          cert: !!null 
+          key: !!null 
+          client_ca: !!null 
+          ca_file: !!null 
+          ca_path: !!null 
+          timeout: !!null 
+          verify_mode: 0
+          verify_depth: !!null 
+          verify_callback: !!null 
+          options: 4095
+          cert_store: !!null 
+          extra_chain_cert: !!null 
+          client_cert_cb: !!null 
+          tmp_dh_callback: !!null 
+          session_id_context: !!null 
+          session_get_cb: !!null 
+          session_new_cb: !!null 
+          session_remove_cb: !!null 
+          servername_cb: !!null 
+        enable_post_connection_check: true
+        compression: !!null 
+        sspi_enabled: false
+        ssl_version: !!null 
+        key: !!null 
+        cert: !!null 
+        ca_file: !!null 
+        ca_path: !!null 
+        cert_store: !!null 
+        ciphers: !!null 
+        verify_mode: 0
+        verify_callback: !!null 
+        verify_depth: !!null 
+        ssl_timeout: !!null 
+        newimpl: true
+      http_method: :post
+      uri: !ruby/object:URI::HTTPS
+        scheme: https
+        user: !!null 
+        password: !!null 
+        host: api.twitter.com
+        port: 443
+        path: ''
+        query: !!null 
+        opaque: !!null 
+        registry: !!null 
+        fragment: !!null 
+        parser: !!null 
+    params:
+      :oauth_token: 19380272-PY3VShSu8ZjFNBYizaMLKGP267GRPI4KooefPXdFc
+      oauth_token: 19380272-PY3VShSu8ZjFNBYizaMLKGP267GRPI4KooefPXdFc
+      :oauth_token_secret: pQR2t6qFZSdBCEpn7QCxlKWFoaIbWlJ9ENsN3gj6A
+      oauth_token_secret: pQR2t6qFZSdBCEpn7QCxlKWFoaIbWlJ9ENsN3gj6A
+      :user_id: '19380272'
+      user_id: '19380272'
+      :screen_name: Control__Freak
+      screen_name: Control__Freak
+    response: !ruby/object:Net::HTTPOK
+      http_version: '1.1'
+      code: '200'
+      message: OK
+      header:
+        date:
+        - Sun, 10 Jul 2011 03:09:33 GMT
+        server:
+        - hi
+        status:
+        - 200 OK
+        x-transaction:
+        - 1310267373-16568-49379
+        x-ratelimit-limit:
+        - '350'
+        etag:
+        - ! '"293cdedc083d8bff6813891a8d802934"'
+        x-frame-options:
+        - SAMEORIGIN
+        last-modified:
+        - Sun, 10 Jul 2011 03:09:33 GMT
+        x-ratelimit-remaining:
+        - '344'
+        x-runtime:
+        - '0.06500'
+        x-transaction-mask:
+        - a6183ffa5f8ca943ff1b53b5644ef114f5555dde
+        content-type:
+        - application/json; charset=utf-8
+        content-length:
+        - '1947'
+        pragma:
+        - no-cache
+        x-access-level:
+        - read-write
+        x-ratelimit-class:
+        - api_identified
+        x-revision:
+        - DEV
+        expires:
+        - Tue, 31 Mar 1981 05:00:00 GMT
+        cache-control:
+        - no-cache, no-store, must-revalidate, pre-check=0, post-check=0
+        x-mid:
+        - c49fd614324ec6ca2c3d3710b0076f7e1d2e3763
+        x-ratelimit-reset:
+        - '1310270380'
+        set-cookie:
+        - k=221.191.101.65.1310267373799721; path=/; expires=Sun, 17-Jul-11 03:09:33
+          GMT; domain=.twitter.com
+        - guest_id=v1%3A131026737380330731; domain=.twitter.com; path=/; expires=Tue,
+          09 Jul 2013 15:09:33 GMT
+        - lang=en; path=/
+        - twid=u%3D19380272%7CTV6k9RIBFkrzzI14kUCZA88cIrs%3D; domain=.twitter.com;
+          path=/
+        - _twitter_sess=BAh7CToPY3JlYXRlZF9hdGwrCPZ4BRIxAToMY3NyZl9pZCIlM2UzNDg4MzVl%250ANDAzZmU5YjAxMjExOGRmNDE4ZTJkZWQ6B2lkIiUxMzYyZTkxMmEyYThlOWZm%250AZmQzMGJhZjc5NmEyMjQ4YSIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6%250ARmxhc2g6OkZsYXNoSGFzaHsABjoKQHVzZWR7AA%253D%253D--2b1bcd56eb9379b3507d6820cfe1d98fff3bbdf8;
+          domain=.twitter.com; path=/; HttpOnly
+        vary:
+        - Accept-Encoding
+        connection:
+        - close
+      body: ! '{"statuses_count":1614,"protected":false,"profile_text_color":"333333","name":"Control
+        Freak Matt","profile_sidebar_fill_color":"DDFFCC","id_str":"19380272","default_profile":false,"listed_count":15,"profile_background_tile":false,"utc_offset":32400,"profile_image_url":"http:\/\/a0.twimg.com\/profile_images\/87423776\/logo_bw_normal.jpg","following":false,"description":"LAPTOP
+        BATTLE TOKYO VOL.6\r\n6\u670822\u65e5 June 22nd\r\nhttp:\/\/www.laptopbattle.jp","location":"Tokyo","verified":false,"profile_background_image_url_https":"https:\/\/si0.twimg.com\/profile_background_images\/4024561\/camo2.png","profile_link_color":"0084B4","followers_count":268,"screen_name":"Control__Freak","status":{"place":null,"in_reply_to_user_id":null,"retweet_count":0,"id_str":"89305415996805121","geo":null,"favorited":false,"text":"My
+        Top 3 #lastfm Artists: Muffler (2), Nero (2) & Noisia (2) http:\/\/bit.ly\/91Hb0n","in_reply_to_status_id_str":null,"in_reply_to_screen_name":null,"in_reply_to_user_id_str":null,"coordinates":null,"truncated":false,"contributors":null,"retweeted":false,"id":89305415996805121,"source":"\u003Ca
+        href=\"http:\/\/www.tweekly.fm\/\" rel=\"nofollow\"\u003ETweekly.fm\u003C\/a\u003E","created_at":"Fri
+        Jul 08 12:10:45 +0000 2011","in_reply_to_status_id":null},"profile_sidebar_border_color":"BDDCAD","url":"http:\/\/www.basshaemorrhage.com","profile_image_url_https":"https:\/\/si0.twimg.com\/profile_images\/87423776\/logo_bw_normal.jpg","default_profile_image":false,"time_zone":"Tokyo","id":19380272,"show_all_inline_media":true,"contributors_enabled":false,"geo_enabled":false,"notifications":false,"profile_use_background_image":true,"favourites_count":2,"created_at":"Fri
+        Jan 23 03:58:23 +0000 2009","is_translator":false,"profile_background_color":"9AE4E8","follow_request_sent":false,"lang":"en","profile_background_image_url":"http:\/\/a1.twimg.com\/profile_background_images\/4024561\/camo2.png","friends_count":268}'
+      read: true
+      socket: !!null 
+      body_exist: true
+  user_hash:
+    statuses_count: 1614
+    protected: false
+    profile_text_color: '333333'
+    name: Control Freak Matt
+    profile_sidebar_fill_color: DDFFCC
+    id_str: '19380272'
+    default_profile: false
+    listed_count: 15
+    profile_background_tile: false
+    utc_offset: 32400
+    profile_image_url: http://a0.twimg.com/profile_images/87423776/logo_bw_normal.jpg
+    following: false
+    description: ! "LAPTOP BATTLE TOKYO VOL.6\r\n6月22日 June 22nd\r\nhttp://www.laptopbattle.jp"
+    location: Tokyo
+    verified: false
+    profile_background_image_url_https: https://si0.twimg.com/profile_background_images/4024561/camo2.png
+    profile_link_color: 0084B4
+    followers_count: 268
+    screen_name: Control__Freak
+    status:
+      place: !!null 
+      in_reply_to_user_id: !!null 
+      retweet_count: 0
+      id_str: '89305415996805121'
+      geo: !!null 
+      favorited: false
+      text: ! 'My Top 3 #lastfm Artists: Muffler (2), Nero (2) & Noisia (2) http://bit.ly/91Hb0n'
+      in_reply_to_status_id_str: !!null 
+      in_reply_to_screen_name: !!null 
+      in_reply_to_user_id_str: !!null 
+      coordinates: !!null 
+      truncated: false
+      contributors: !!null 
+      retweeted: false
+      id: 89305415996805121
+      source: <a href="http://www.tweekly.fm/" rel="nofollow">Tweekly.fm</a>
+      created_at: Fri Jul 08 12:10:45 +0000 2011
+      in_reply_to_status_id: !!null 
+    profile_sidebar_border_color: BDDCAD
+    url: http://www.basshaemorrhage.com
+    profile_image_url_https: https://si0.twimg.com/profile_images/87423776/logo_bw_normal.jpg
+    default_profile_image: false
+    time_zone: Tokyo
+    id: 19380272
+    show_all_inline_media: true
+    contributors_enabled: false
+    geo_enabled: false
+    notifications: false
+    profile_use_background_image: true
+    favourites_count: 2
+    created_at: Fri Jan 23 03:58:23 +0000 2009
+    is_translator: false
+    profile_background_color: 9AE4E8
+    follow_request_sent: false
+    lang: en
+    profile_background_image_url: http://a1.twimg.com/profile_background_images/4024561/camo2.png
+    friends_count: 268
+user_info:
+  nickname: Control__Freak
+  name: Control Freak Matt
+  location: Tokyo
+  image: http://a0.twimg.com/profile_images/87423776/logo_bw_normal.jpg
+  description: ! "LAPTOP BATTLE TOKYO VOL.6\r\n6月22日 June 22nd\r\nhttp://www.laptopbattle.jp"
+  urls:
+    Website: http://www.basshaemorrhage.com
+    Twitter: http://twitter.com/Control__Freak
+):
+  app/controllers/sessions_controller.rb:3:in `create'
+
+Rendered /Users/matt/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.3ms)
+Rendered /Users/matt/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (6.7ms)
+Rendered /Users/matt/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (12.1ms)
+
+
+Started GET "/" for 127.0.0.1 at 2011-07-10 12:11:50 +0900
+  Processing by HomeController#index as HTML
+Rendered home/index.html.erb within layouts/application (1.8ms)
+Completed 200 OK in 7ms (Views: 6.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/auth/twitter" for 127.0.0.1 at 2011-07-10 12:11:52 +0900
+
+
+Started GET "/auth/twitter/callback?oauth_token=esYBQcPMwSRNfkb2esbyDKTjeWhfGqIxsK4K7ugT4&oauth_verifier=p4GL9nko2d1R2Lwb1ByR35cZ8kPcz92pvdLiD7rkA" for 127.0.0.1 at 2011-07-10 12:11:54 +0900
+  Processing by SessionsController#create as HTML
+  Parameters: {"oauth_token"=>"esYBQcPMwSRNfkb2esbyDKTjeWhfGqIxsK4K7ugT4", "oauth_verifier"=>"p4GL9nko2d1R2Lwb1ByR35cZ8kPcz92pvdLiD7rkA", "provider"=>"twitter"}
+Completed 500 Internal Server Error in 5ms
+
+NameError (uninitialized constant SessionsController::User):
+  app/controllers/sessions_controller.rb:5:in `create'
+
+Rendered /Users/matt/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.3ms)
+Rendered /Users/matt/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (6.7ms)
+Rendered /Users/matt/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (12.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2011-07-10 12:26:41 +0900
+  Processing by HomeController#index as HTML
+Rendered home/index.html.erb within layouts/application (2.1ms)
+Completed 200 OK in 7ms (Views: 6.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/auth/twitter" for 127.0.0.1 at 2011-07-10 12:26:44 +0900
+
+
+Started GET "/auth/twitter/callback?oauth_token=ZEPYGtm1uRJpPjHm5uhRKEdIJpE3BliH6vkxFpiCZOY&oauth_verifier=KDmvaOzQ41o5QUtQASN2zkidXz1W7i7tEBGY2ztu8" for 127.0.0.1 at 2011-07-10 12:26:45 +0900
+  Processing by SessionsController#create as HTML
+  Parameters: {"oauth_token"=>"ZEPYGtm1uRJpPjHm5uhRKEdIJpE3BliH6vkxFpiCZOY", "oauth_verifier"=>"KDmvaOzQ41o5QUtQASN2zkidXz1W7i7tEBGY2ztu8", "provider"=>"twitter"}
+Completed 500 Internal Server Error in 34ms
+
+NameError (uninitialized constant SessionsController::User):
+  app/controllers/sessions_controller.rb:5:in `create'
+
+Rendered /Users/matt/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.5ms)
+Rendered /Users/matt/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (6.5ms)
+Rendered /Users/matt/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (12.8ms)
+
+
+Started GET "/" for 127.0.0.1 at 2011-07-10 12:27:19 +0900
+  Processing by HomeController#index as HTML
+Rendered home/index.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 6ms (Views: 5.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/auth/twitter" for 127.0.0.1 at 2011-07-10 12:27:22 +0900
+
+
+Started GET "/auth/twitter/callback?oauth_token=AvZCEu3tycCV1lddw9IsRWfUc1HfALdEH8B3cvmn5c&oauth_verifier=Nto49wXoIJxrHHMvwPULnMvGpV5um01jPXGh4giCH4" for 127.0.0.1 at 2011-07-10 12:27:24 +0900
+  Processing by SessionsController#create as HTML
+  Parameters: {"oauth_token"=>"AvZCEu3tycCV1lddw9IsRWfUc1HfALdEH8B3cvmn5c", "oauth_verifier"=>"Nto49wXoIJxrHHMvwPULnMvGpV5um01jPXGh4giCH4", "provider"=>"twitter"}
+Completed 500 Internal Server Error in 13ms
+
+RuntimeError (---
+provider: twitter
+uid: '19380272'
+credentials:
+  token: 19380272-PY3VShSu8ZjFNBYizaMLKGP267GRPI4KooefPXdFc
+  secret: pQR2t6qFZSdBCEpn7QCxlKWFoaIbWlJ9ENsN3gj6A
+extra:
+  access_token: !ruby/object:OAuth::AccessToken
+    token: 19380272-PY3VShSu8ZjFNBYizaMLKGP267GRPI4KooefPXdFc
+    secret: pQR2t6qFZSdBCEpn7QCxlKWFoaIbWlJ9ENsN3gj6A
+    consumer: !ruby/object:OAuth::Consumer
+      key: fVmohsS3LBUSZbG5ciweHA
+      secret: eaQFzHQMQiJo91FpqAer4G5rkpGuggGRfQUPLfaNx5s
+      options:
+        :signature_method: HMAC-SHA1
+        :request_token_path: /oauth/request_token
+        :authorize_path: /oauth/authenticate
+        :access_token_path: /oauth/access_token
+        :proxy: !!null 
+        :scheme: :header
+        :http_method: :post
+        :oauth_version: '1.0'
+        :site: https://api.twitter.com
+      http: !ruby/object:Net::HTTP
+        address: api.twitter.com
+        port: 443
+        curr_http_version: '1.1'
+        no_keepalive_server: false
+        close_on_empty_response: false
+        socket: !!null 
+        started: false
+        open_timeout: 30
+        read_timeout: 30
+        debug_output: !!null 
+        use_ssl: true
+        ssl_context: !ruby/object:OpenSSL::SSL::SSLContext
+          cert: !!null 
+          key: !!null 
+          client_ca: !!null 
+          ca_file: !!null 
+          ca_path: !!null 
+          timeout: !!null 
+          verify_mode: 0
+          verify_depth: !!null 
+          verify_callback: !!null 
+          options: 4095
+          cert_store: !!null 
+          extra_chain_cert: !!null 
+          client_cert_cb: !!null 
+          tmp_dh_callback: !!null 
+          session_id_context: !!null 
+          session_get_cb: !!null 
+          session_new_cb: !!null 
+          session_remove_cb: !!null 
+          servername_cb: !!null 
+        enable_post_connection_check: true
+        compression: !!null 
+        sspi_enabled: false
+        ssl_version: !!null 
+        key: !!null 
+        cert: !!null 
+        ca_file: !!null 
+        ca_path: !!null 
+        cert_store: !!null 
+        ciphers: !!null 
+        verify_mode: 0
+        verify_callback: !!null 
+        verify_depth: !!null 
+        ssl_timeout: !!null 
+        newimpl: true
+      http_method: :post
+      uri: !ruby/object:URI::HTTPS
+        scheme: https
+        user: !!null 
+        password: !!null 
+        host: api.twitter.com
+        port: 443
+        path: ''
+        query: !!null 
+        opaque: !!null 
+        registry: !!null 
+        fragment: !!null 
+        parser: !!null 
+    params:
+      :oauth_token: 19380272-PY3VShSu8ZjFNBYizaMLKGP267GRPI4KooefPXdFc
+      oauth_token: 19380272-PY3VShSu8ZjFNBYizaMLKGP267GRPI4KooefPXdFc
+      :oauth_token_secret: pQR2t6qFZSdBCEpn7QCxlKWFoaIbWlJ9ENsN3gj6A
+      oauth_token_secret: pQR2t6qFZSdBCEpn7QCxlKWFoaIbWlJ9ENsN3gj6A
+      :user_id: '19380272'
+      user_id: '19380272'
+      :screen_name: Control__Freak
+      screen_name: Control__Freak
+    response: !ruby/object:Net::HTTPOK
+      http_version: '1.1'
+      code: '200'
+      message: OK
+      header:
+        date:
+        - Sun, 10 Jul 2011 03:27:25 GMT
+        server:
+        - hi
+        status:
+        - 200 OK
+        x-transaction:
+        - 1310268445-16653-62080
+        x-ratelimit-limit:
+        - '350'
+        etag:
+        - ! '"4600f3edae28e11044efbc9943df2379"'
+        x-frame-options:
+        - SAMEORIGIN
+        last-modified:
+        - Sun, 10 Jul 2011 03:27:25 GMT
+        x-ratelimit-remaining:
+        - '341'
+        x-runtime:
+        - '0.02269'
+        x-transaction-mask:
+        - a6183ffa5f8ca943ff1b53b5644ef114f5555dde
+        content-type:
+        - application/json; charset=utf-8
+        content-length:
+        - '1947'
+        pragma:
+        - no-cache
+        x-access-level:
+        - read-write
+        x-ratelimit-class:
+        - api_identified
+        x-revision:
+        - DEV
+        expires:
+        - Tue, 31 Mar 1981 05:00:00 GMT
+        cache-control:
+        - no-cache, no-store, must-revalidate, pre-check=0, post-check=0
+        x-mid:
+        - 68465914f41bea34b62e93fd7eb9ff3d15f8559c
+        x-ratelimit-reset:
+        - '1310270380'
+        set-cookie:
+        - k=221.191.101.65.1310268445456924; path=/; expires=Sun, 17-Jul-11 03:27:25
+          GMT; domain=.twitter.com
+        - guest_id=v1%3A131026844546022464; domain=.twitter.com; path=/; expires=Tue,
+          09 Jul 2013 15:27:25 GMT
+        - lang=en; path=/
+        - twid=u%3D19380272%7CTV6k9RIBFkrzzI14kUCZA88cIrs%3D; domain=.twitter.com;
+          path=/
+        - _twitter_sess=BAh7CToMY3NyZl9pZCIlMWY0ZGE3NTMwNDM0MDAyZjMwMTY5NzYxMGZkMTU4%250ANTA6B2lkIiVhNzA3YzYyODUzN2RkMjZjYjIyOWZkYWQ4MjBhYjRlZjoPY3Jl%250AYXRlZF9hdGwrCBzTFRIxASIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6%250ARmxhc2g6OkZsYXNoSGFzaHsABjoKQHVzZWR7AA%253D%253D--907330f490e7ffe3f4cb20bd752aa67c7f3b74b0;
+          domain=.twitter.com; path=/; HttpOnly
+        vary:
+        - Accept-Encoding
+        connection:
+        - close
+      body: ! '{"profile_background_color":"9AE4E8","screen_name":"Control__Freak","profile_background_image_url":"http:\/\/a1.twimg.com\/profile_background_images\/4024561\/camo2.png","url":"http:\/\/www.basshaemorrhage.com","description":"LAPTOP
+        BATTLE TOKYO VOL.6\r\n6\u670822\u65e5 June 22nd\r\nhttp:\/\/www.laptopbattle.jp","status":{"in_reply_to_status_id":null,"text":"My
+        Top 3 #lastfm Artists: Muffler (2), Nero (2) & Noisia (2) http:\/\/bit.ly\/91Hb0n","in_reply_to_user_id":null,"created_at":"Fri
+        Jul 08 12:10:45 +0000 2011","retweet_count":0,"source":"\u003Ca href=\"http:\/\/www.tweekly.fm\/\"
+        rel=\"nofollow\"\u003ETweekly.fm\u003C\/a\u003E","id_str":"89305415996805121","geo":null,"favorited":false,"in_reply_to_status_id_str":null,"place":null,"in_reply_to_screen_name":null,"in_reply_to_user_id_str":null,"coordinates":null,"truncated":false,"contributors":null,"retweeted":false,"id":89305415996805121},"listed_count":15,"created_at":"Fri
+        Jan 23 03:58:23 +0000 2009","profile_text_color":"333333","profile_background_image_url_https":"https:\/\/si0.twimg.com\/profile_background_images\/4024561\/camo2.png","profile_sidebar_fill_color":"DDFFCC","id_str":"19380272","lang":"en","profile_background_tile":false,"profile_image_url_https":"https:\/\/si0.twimg.com\/profile_images\/87423776\/logo_bw_normal.jpg","default_profile_image":false,"default_profile":false,"show_all_inline_media":true,"contributors_enabled":false,"verified":false,"geo_enabled":false,"profile_link_color":"0084B4","followers_count":267,"protected":false,"is_translator":false,"profile_sidebar_border_color":"BDDCAD","name":"Control
+        Freak Matt","follow_request_sent":false,"time_zone":"Tokyo","friends_count":268,"profile_image_url":"http:\/\/a0.twimg.com\/profile_images\/87423776\/logo_bw_normal.jpg","id":19380272,"statuses_count":1614,"following":false,"notifications":false,"profile_use_background_image":true,"utc_offset":32400,"favourites_count":2,"location":"Tokyo"}'
+      read: true
+      socket: !!null 
+      body_exist: true
+  user_hash:
+    profile_background_color: 9AE4E8
+    screen_name: Control__Freak
+    profile_background_image_url: http://a1.twimg.com/profile_background_images/4024561/camo2.png
+    url: http://www.basshaemorrhage.com
+    description: ! "LAPTOP BATTLE TOKYO VOL.6\r\n6月22日 June 22nd\r\nhttp://www.laptopbattle.jp"
+    status:
+      in_reply_to_status_id: !!null 
+      text: ! 'My Top 3 #lastfm Artists: Muffler (2), Nero (2) & Noisia (2) http://bit.ly/91Hb0n'
+      in_reply_to_user_id: !!null 
+      created_at: Fri Jul 08 12:10:45 +0000 2011
+      retweet_count: 0
+      source: <a href="http://www.tweekly.fm/" rel="nofollow">Tweekly.fm</a>
+      id_str: '89305415996805121'
+      geo: !!null 
+      favorited: false
+      in_reply_to_status_id_str: !!null 
+      place: !!null 
+      in_reply_to_screen_name: !!null 
+      in_reply_to_user_id_str: !!null 
+      coordinates: !!null 
+      truncated: false
+      contributors: !!null 
+      retweeted: false
+      id: 89305415996805121
+    listed_count: 15
+    created_at: Fri Jan 23 03:58:23 +0000 2009
+    profile_text_color: '333333'
+    profile_background_image_url_https: https://si0.twimg.com/profile_background_images/4024561/camo2.png
+    profile_sidebar_fill_color: DDFFCC
+    id_str: '19380272'
+    lang: en
+    profile_background_tile: false
+    profile_image_url_https: https://si0.twimg.com/profile_images/87423776/logo_bw_normal.jpg
+    default_profile_image: false
+    default_profile: false
+    show_all_inline_media: true
+    contributors_enabled: false
+    verified: false
+    geo_enabled: false
+    profile_link_color: 0084B4
+    followers_count: 267
+    protected: false
+    is_translator: false
+    profile_sidebar_border_color: BDDCAD
+    name: Control Freak Matt
+    follow_request_sent: false
+    time_zone: Tokyo
+    friends_count: 268
+    profile_image_url: http://a0.twimg.com/profile_images/87423776/logo_bw_normal.jpg
+    id: 19380272
+    statuses_count: 1614
+    following: false
+    notifications: false
+    profile_use_background_image: true
+    utc_offset: 32400
+    favourites_count: 2
+    location: Tokyo
+user_info:
+  nickname: Control__Freak
+  name: Control Freak Matt
+  location: Tokyo
+  image: http://a0.twimg.com/profile_images/87423776/logo_bw_normal.jpg
+  description: ! "LAPTOP BATTLE TOKYO VOL.6\r\n6月22日 June 22nd\r\nhttp://www.laptopbattle.jp"
+  urls:
+    Website: http://www.basshaemorrhage.com
+    Twitter: http://twitter.com/Control__Freak
+):
+  app/controllers/sessions_controller.rb:3:in `create'
+
+Rendered /Users/matt/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.2ms)
+Rendered /Users/matt/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (6.6ms)
+Rendered /Users/matt/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (12.1ms)
+
+
+Started GET "/" for 127.0.0.1 at 2011-07-10 12:30:30 +0900
+  Processing by HomeController#index as HTML
+Rendered home/index.html.erb within layouts/application (1.8ms)
+Completed 200 OK in 6ms (Views: 5.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/auth/twitter" for 127.0.0.1 at 2011-07-10 12:30:32 +0900
+
+
+Started GET "/auth/twitter/callback?oauth_token=7VlYjj2gTV36rmnnHByb2kvyfjI1t4yq0bZwtoiRXFc&oauth_verifier=LgtNZqcsDSmLAqNDZoCoRBDScQ51cQZnwB4Ff129h8" for 127.0.0.1 at 2011-07-10 12:30:33 +0900
+  Processing by SessionsController#create as HTML
+  Parameters: {"oauth_token"=>"7VlYjj2gTV36rmnnHByb2kvyfjI1t4yq0bZwtoiRXFc", "oauth_verifier"=>"LgtNZqcsDSmLAqNDZoCoRBDScQ51cQZnwB4Ff129h8", "provider"=>"twitter"}
+Completed 500 Internal Server Error in 5ms
+
+NameError (uninitialized constant SessionsController::User):
+  app/controllers/sessions_controller.rb:5:in `create'
+
+Rendered /Users/matt/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.5ms)
+Rendered /Users/matt/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (6.4ms)
+Rendered /Users/matt/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (12.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2011-07-10 12:36:21 +0900
+  Processing by HomeController#index as HTML
+Rendered home/index.html.erb within layouts/application (2.1ms)
+Completed 200 OK in 7ms (Views: 6.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/auth/twitter" for 127.0.0.1 at 2011-07-10 12:36:23 +0900
+
+
+Started GET "/auth/twitter/callback?oauth_token=0DKWXQOldib0c1TJX2Q2Wn1S5tBnLeAtmPBGqSARw&oauth_verifier=Y96ogOq9UJjfgPxxRcIIfGW155CnBDkUERwDsjMp0" for 127.0.0.1 at 2011-07-10 12:36:24 +0900
+  Processing by SessionsController#create as HTML
+  Parameters: {"oauth_token"=>"0DKWXQOldib0c1TJX2Q2Wn1S5tBnLeAtmPBGqSARw", "oauth_verifier"=>"Y96ogOq9UJjfgPxxRcIIfGW155CnBDkUERwDsjMp0", "provider"=>"twitter"}
+Completed 500 Internal Server Error in 5ms
+
+NameError (uninitialized constant SessionsController::User):
+  app/controllers/sessions_controller.rb:5:in `create'
+
+Rendered /Users/matt/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.2ms)
+Rendered /Users/matt/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (6.6ms)
+Rendered /Users/matt/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (12.0ms)
+
+
+Started GET "/auth/twitter" for 127.0.0.1 at 2011-07-10 12:37:55 +0900
+
+
+Started GET "/auth/twitter/callback?oauth_token=wIHsC77seoGUVdpTl1fmwSC6ttqShlWslyoe78khq8&oauth_verifier=Ok5DBqKxPOjckgAUZALuk3oPjEwLDGo4ryT1oe2qZvU" for 127.0.0.1 at 2011-07-10 12:37:56 +0900
+  Processing by SessionsController#create as HTML
+  Parameters: {"oauth_token"=>"wIHsC77seoGUVdpTl1fmwSC6ttqShlWslyoe78khq8", "oauth_verifier"=>"Ok5DBqKxPOjckgAUZALuk3oPjEwLDGo4ryT1oe2qZvU", "provider"=>"twitter"}
+Completed 500 Internal Server Error in 5ms
+
+NameError (uninitialized constant SessionsController::User):
+  app/controllers/sessions_controller.rb:5:in `create'
+
+Rendered /Users/matt/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.3ms)
+Rendered /Users/matt/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (6.6ms)
+Rendered /Users/matt/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (19.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2011-07-10 12:40:59 +0900
+  Processing by HomeController#index as HTML
+Rendered home/index.html.erb within layouts/application (27.2ms)
+Completed 200 OK in 32ms (Views: 31.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2011-07-10 12:41:06 +0900
+  Processing by HomeController#index as HTML
+Rendered home/index.html.erb within layouts/application (2.2ms)
+Completed 200 OK in 6ms (Views: 6.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/auth/twitter" for 127.0.0.1 at 2011-07-10 12:41:09 +0900
+
+
+Started GET "/auth/twitter/callback?oauth_token=PaPWGV7vQYeQLQ35y588tBmTzxNgTYCUdKjADnyV2jo&oauth_verifier=pk9xNNW3ENsrU3TzphfS2aOeh7vFQWuqzOoUGCI" for 127.0.0.1 at 2011-07-10 12:41:11 +0900
+  Processing by SessionsController#create as HTML
+  Parameters: {"oauth_token"=>"PaPWGV7vQYeQLQ35y588tBmTzxNgTYCUdKjADnyV2jo", "oauth_verifier"=>"pk9xNNW3ENsrU3TzphfS2aOeh7vFQWuqzOoUGCI", "provider"=>"twitter"}
+Completed 500 Internal Server Error in 5ms
+
+NameError (uninitialized constant SessionsController::User):
+  app/controllers/sessions_controller.rb:5:in `create'
+
+Rendered /Users/matt/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.4ms)
+Rendered /Users/matt/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (7.0ms)
+Rendered /Users/matt/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (13.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2011-07-10 12:43:16 +0900
+  Processing by HomeController#index as HTML
+Rendered home/index.html.erb within layouts/application (1.9ms)
+Completed 200 OK in 6ms (Views: 5.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/auth/twitter" for 127.0.0.1 at 2011-07-10 12:43:18 +0900
+
+
+Started GET "/auth/twitter/callback?oauth_token=aWnfNtasq4MycVjZ6NMrzpiqjDYsvsiipesWIw8E&oauth_verifier=44TNPOTU65F1hIgQnazUfwDWs4jtViCzLbK0Vtk8cw" for 127.0.0.1 at 2011-07-10 12:43:19 +0900
+  Processing by SessionsController#create as HTML
+  Parameters: {"oauth_token"=>"aWnfNtasq4MycVjZ6NMrzpiqjDYsvsiipesWIw8E", "oauth_verifier"=>"44TNPOTU65F1hIgQnazUfwDWs4jtViCzLbK0Vtk8cw", "provider"=>"twitter"}
+Completed 500 Internal Server Error in 5ms
+
+NameError (uninitialized constant SessionsController::User):
+  app/controllers/sessions_controller.rb:5:in `create'
+
+Rendered /Users/matt/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/_trace.erb (31.3ms)
+Rendered /Users/matt/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (6.7ms)
+Rendered /Users/matt/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (42.5ms)
