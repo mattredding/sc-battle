@@ -1180,3 +1180,148 @@ Migrating to CreateUsers (20110710030520)
 [0m
   [1m[35mSQL (0.1ms)[0m  SELECT version FROM "schema_migrations"
   [1m[36mSQL (1.5ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20110710030520')[0m
+DEPRECATION WARNING: config.action_view.debug_rjs will be removed in 3.1, from 3.1 onwards you will need to install prototype-rails to continue to use RJS templates . (called from handle at /Users/matt/Library/Application Support/Pow/Versions/0.3.1/node_modules/nack/lib/nack/server.rb:146)
+
+
+Started GET "/" for 127.0.0.1 at 2011-07-10 13:59:16 +0900
+  Processing by HomeController#index as HTML
+Rendered home/index.html.erb within layouts/application (2.2ms)
+Completed 200 OK in 7ms (Views: 7.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/auth/twitter" for 127.0.0.1 at 2011-07-10 13:59:19 +0900
+
+
+Started GET "/auth/twitter/callback?oauth_token=IqeMVgqoGKvi653MxS0dB3Qlhgp9o7nVUfYtyqTo&oauth_verifier=DYNATKnfJs6dLOqIMRNUs9mCha7GaWQBev0VjJ2pg" for 127.0.0.1 at 2011-07-10 13:59:21 +0900
+  Processing by SessionsController#create as HTML
+  Parameters: {"oauth_token"=>"IqeMVgqoGKvi653MxS0dB3Qlhgp9o7nVUfYtyqTo", "oauth_verifier"=>"DYNATKnfJs6dLOqIMRNUs9mCha7GaWQBev0VjJ2pg", "provider"=>"twitter"}
+  [1m[36mSQL (0.2ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."provider" = 'twitter' AND "users"."uid" = '19380272' LIMIT 1
+Redirected to http://sc-battle.dev/
+Completed 302 Found in 164ms
+
+
+Started GET "/" for 127.0.0.1 at 2011-07-10 13:59:22 +0900
+  Processing by HomeController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+Rendered home/index.html.erb within layouts/application (22.9ms)
+Completed 200 OK in 27ms (Views: 26.6ms | ActiveRecord: 0.7ms)
+DEPRECATION WARNING: config.action_view.debug_rjs will be removed in 3.1, from 3.1 onwards you will need to install prototype-rails to continue to use RJS templates . (called from handle at /Users/matt/Library/Application Support/Pow/Versions/0.3.1/node_modules/nack/lib/nack/server.rb:146)
+
+
+Started GET "/" for 127.0.0.1 at 2011-07-10 14:55:32 +0900
+  Processing by HomeController#index as HTML
+  [1m[36mSQL (0.5ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+Rendered home/index.html.erb within layouts/application (108.5ms)
+Completed 200 OK in 114ms (Views: 112.8ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/signout" for 127.0.0.1 at 2011-07-10 14:55:35 +0900
+  Processing by SessionsController#destroy as HTML
+Redirected to http://sc-battle.dev/
+Completed 302 Found in 1ms
+
+
+Started GET "/" for 127.0.0.1 at 2011-07-10 14:55:35 +0900
+  Processing by HomeController#index as HTML
+Rendered home/index.html.erb within layouts/application (2.1ms)
+Completed 200 OK in 6ms (Views: 6.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2011-07-10 14:55:57 +0900
+  Processing by HomeController#index as HTML
+Rendered home/index.html.erb within layouts/application (2.3ms)
+Completed 200 OK in 7ms (Views: 6.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/auth/soundcloud" for 127.0.0.1 at 2011-07-10 14:56:00 +0900
+
+
+Started GET "/auth/soundcloud/callback?oauth_token=ZklflrRnofy3jvCxkOX3nw&oauth_verifier=777004" for 127.0.0.1 at 2011-07-10 14:56:10 +0900
+  Processing by SessionsController#create as HTML
+  Parameters: {"oauth_token"=>"ZklflrRnofy3jvCxkOX3nw", "oauth_verifier"=>"777004", "provider"=>"soundcloud"}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."provider" = 'soundcloud' AND "users"."uid" = 93777 LIMIT 1[0m
+  [1m[35mAREL (0.5ms)[0m  INSERT INTO "users" ("provider", "uid", "name", "created_at", "updated_at") VALUES ('soundcloud', 93777, 'Matt Redding', '2011-07-10 05:56:14.310676', '2011-07-10 05:56:14.310676')
+Redirected to http://sc-battle.dev/
+Completed 302 Found in 125ms
+
+
+Started GET "/" for 127.0.0.1 at 2011-07-10 14:56:14 +0900
+  Processing by HomeController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 2 LIMIT 1[0m
+Rendered home/index.html.erb within layouts/application (21.6ms)
+Completed 200 OK in 26ms (Views: 25.7ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/" for 127.0.0.1 at 2011-07-10 14:56:56 +0900
+  Processing by HomeController#index as HTML
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 2 LIMIT 1
+Rendered home/index.html.erb within layouts/application (52.8ms)
+Completed 200 OK in 57ms (Views: 56.9ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/signout" for 127.0.0.1 at 2011-07-10 14:57:01 +0900
+  Processing by SessionsController#destroy as HTML
+Redirected to http://sc-battle.dev/
+Completed 302 Found in 1ms
+
+
+Started GET "/" for 127.0.0.1 at 2011-07-10 14:57:01 +0900
+  Processing by HomeController#index as HTML
+Rendered home/index.html.erb within layouts/application (2.1ms)
+Completed 200 OK in 7ms (Views: 6.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/auth/twitter" for 127.0.0.1 at 2011-07-10 14:57:03 +0900
+
+
+Started GET "/auth/twitter/callback?oauth_token=RxnP2nzloKH5DDyWopZPQuGJldZdsHxTurbEzYpnRew&oauth_verifier=TkKjEN5Mtofi5mU6HeZRvzrJWPpyBf0UILIzWe7OQ" for 127.0.0.1 at 2011-07-10 14:57:04 +0900
+  Processing by SessionsController#create as HTML
+  Parameters: {"oauth_token"=>"RxnP2nzloKH5DDyWopZPQuGJldZdsHxTurbEzYpnRew", "oauth_verifier"=>"TkKjEN5Mtofi5mU6HeZRvzrJWPpyBf0UILIzWe7OQ", "provider"=>"twitter"}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."provider" = 'twitter' AND "users"."uid" = '19380272' LIMIT 1[0m
+Redirected to http://sc-battle.dev/
+Completed 302 Found in 17ms
+
+
+Started GET "/" for 127.0.0.1 at 2011-07-10 14:57:05 +0900
+  Processing by HomeController#index as HTML
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+Rendered home/index.html.erb within layouts/application (21.4ms)
+Completed 200 OK in 26ms (Views: 25.5ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/signout" for 127.0.0.1 at 2011-07-10 14:57:07 +0900
+  Processing by SessionsController#destroy as HTML
+Redirected to http://sc-battle.dev/
+Completed 302 Found in 1ms
+
+
+Started GET "/" for 127.0.0.1 at 2011-07-10 14:57:07 +0900
+  Processing by HomeController#index as HTML
+Rendered home/index.html.erb within layouts/application (2.2ms)
+Completed 200 OK in 7ms (Views: 6.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/auth/soundcloud" for 127.0.0.1 at 2011-07-10 14:57:08 +0900
+
+
+Started GET "/auth/soundcloud/callback?oauth_token=KzqMa14qMa43eFSdesILg&oauth_verifier=550146" for 127.0.0.1 at 2011-07-10 14:57:15 +0900
+  Processing by SessionsController#create as HTML
+  Parameters: {"oauth_token"=>"KzqMa14qMa43eFSdesILg", "oauth_verifier"=>"550146", "provider"=>"soundcloud"}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."provider" = 'soundcloud' AND "users"."uid" = 93777 LIMIT 1[0m
+Redirected to http://sc-battle.dev/
+Completed 302 Found in 52ms
+
+
+Started GET "/" for 127.0.0.1 at 2011-07-10 14:57:18 +0900
+  Processing by HomeController#index as HTML
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 2 LIMIT 1
+Rendered home/index.html.erb within layouts/application (21.7ms)
+Completed 200 OK in 26ms (Views: 25.6ms | ActiveRecord: 0.5ms)
