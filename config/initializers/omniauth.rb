@@ -1,4 +1,10 @@
 Rails.application.config.middleware.use OmniAuth::Builder do
-  provider :twitter, 'fVmohsS3LBUSZbG5ciweHA', 'eaQFzHQMQiJo91FpqAer4G5rkpGuggGRfQUPLfaNx5s'
-  provider :soundcloud, 'DeDNYH72GVOkmSU6gBtIDA', 'TZmM0XbY5NCfNBwM1Qq5zV0KAP3SZDyex9WqXOsDGE'
+
+  APP_CONFIG = YAML.load_file("#{RAILS_ROOT}/config/config.yml")[RAILS_ENV]
+  # RAILS_DEFAULT_LOGGER.error("APP_CONFIG")
+  # RAILS_DEFAULT_LOGGER.error(APP_CONFIG)
+
+  provider :twitter, APP_CONFIG['TWITTER_KEY'], APP_CONFIG['TWITTER_SECRET']
+  provider :soundcloud, APP_CONFIG['SOUNDCLOUD_KEY'], APP_CONFIG['SOUNDCLOUD_SECRET']
+
 end
