@@ -3,6 +3,7 @@ source 'http://rubygems.org'
 gem 'rails', '3.0.9'
 gem 'omniauth'
 gem 'rake', '0.8.7'
+gem 'soundcloud', '0.2.0'
 
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'

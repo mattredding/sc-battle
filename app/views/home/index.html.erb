@@ -6,6 +6,17 @@
   Welcome <%= current_user.name %>!
   <%= link_to "Sign Out", signout_path %>
 <% else %>
-  <%= link_to "Sign in with Soundcloud", "/auth/soundcloud" %>
   <%= link_to "Sign in with Twitter", "/auth/twitter" %>
-<% end %>
+<% end %> <br/><br/>
+
+<div class="connect-with-soundcloud <%= "connected" if logged_in? %>">
+  <%= link_to "Connect With SoundCloud",    soundcloud_connect_path, :class => "connect" %>
+  <%= link_to "Disconnect From SoundCloud", soundcloud_disconnect_path, :class => "disconnect" %>
+  <span class="current-user">
+    You are logged in as:
+    <span class="username"><%= current_sc_user.soundcloud_username if logged_in? %></span>
+  </span>
+</div>
+
+<div class="visible-when-logged-in <%= "hidden" unless logged_in? %>"">
+  <%= link_to "Check out your profile infos", you_path %>

@@ -1,0 +1,30 @@
+<div class="infos">
+  <div class="details">
+    <b>Your SoundCloud User Infos:</b>
+    <ul>
+      <li>Username: <%= @me.username %></li>
+      <li>Fullname: <%= @me.full_name %></li>
+      <li>Location: <%= @me.city %>, <%= @me.country %></li>
+    </ul>
+  </div>
+  <%= image_tag(@me.avatar_url, :class => "avatar") %>
+  
+</div>
+
+<div class="description">
+  <% form_tag you_update_path, :method => "post" do %>
+    <b>Description:</b>
+    <textarea name="description"><%= @me.description %></textarea>
+    <input type="submit" value="update" />
+    <span class="warning">this will change your SoundCloud profile description!</span>
+  <% end %>
+</div>
+
+<div class="tracks">
+  <b>Your 5 latest tracks</b>
+  <ul>
+    <% @tracks.each do |track| %>
+      <li><%= link_to track.title, track.permalink_url %></li>
+    <% end %>
+  </ul>
+</div>

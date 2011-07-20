@@ -10,7 +10,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20110710030520) do
+ActiveRecord::Schema.define(:version => 20110720173742) do
 
   create_table "users", :force => true do |t|
     t.string   "provider"
@@ -18,6 +18,10 @@ ActiveRecord::Schema.define(:version => 20110710030520) do
     t.string   "name"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.string   "soundcloud_username"
+    t.string   "soundcloud_access_token"
+    t.string   "soundcloud_refresh_token"
+    t.string   "soundcloud_expires_at"
   end
 
 end
