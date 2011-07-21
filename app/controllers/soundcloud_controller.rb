@@ -9,7 +9,7 @@ class SoundcloudController < ApplicationController
       me = soundcloud_client.get("/me")
 
       login_as User.find_or_create_by_uid({
-        :uid  => me.id,
+        :uid  => me.id.to_s,
         :soundcloud_username => me.username
       })
 
