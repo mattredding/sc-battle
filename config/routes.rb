@@ -5,8 +5,8 @@ ScBattle::Application.routes.draw do
   match "/auth/:provider/callback" => "sessions#create"
   match "/signout" => "sessions#destroy", :as => :signout
 
-  match '/you',           :to => 'home#show',    :as => :you
-  match '/you/update',    :to => 'home#update',  :as => :you_update
+  match '/you',           :to => 'welcome#show',    :as => :you
+  match '/you/update',    :to => 'welcome#update',  :as => :you_update
 
   match '/soundcloud/connect',    :to => 'soundcloud#connect',    :as => :soundcloud_connect
   match '/soundcloud/connected',  :to => 'soundcloud#connected',  :as => :soundcloud_connected
