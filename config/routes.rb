@@ -1,6 +1,13 @@
 ScBattle::Application.routes.draw do
   root :to => "home#index"
   get "home/index"
+  
+  match '/you',           :to => 'home#show',    :as => :you
+  match '/you/update',    :to => 'home#update',  :as => :you_update
+  
+  match '/soundcloud/connect',    :to => 'soundcloud#connect',    :as => :soundcloud_connect
+  match '/soundcloud/connected',  :to => 'soundcloud#connected',  :as => :soundcloud_connected
+  match '/soundcloud/disconnect', :to => 'soundcloud#disconnect', :as => :soundcloud_disconnect
 
   # The priority is based upon order of creation:
   # first created -> highest priority.

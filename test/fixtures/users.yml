@@ -1,0 +1,15 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  soundcloud_uid: 1
+  soundcloud_username: MyString
+  soundcloud_access_token: MyString
+  soundcloud_expires_at: MyString
+  soundcloud_refresh_token: MyString
+
+two:
+  soundcloud_uid: 1
+  soundcloud_username: MyString
+  soundcloud_access_token: MyString
+  soundcloud_expires_at: MyString
+  soundcloud_refresh_token: MyString

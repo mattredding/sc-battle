@@ -1,0 +1,45 @@
+.hidden {
+  display: none;
+}
+
+h1.header {
+  font-size: 18px;
+  height: 30px;
+}
+
+.warning {
+  color: red;
+  font-size: 9px;
+}
+
+.avatar {
+  display: block;
+  float: right;
+  display: inline;
+
+}
+
+.details {
+  float: left;
+  display: inline;
+  width: 200px;
+  margin-left: 5px;
+  margin-top: -4px;
+}
+
+.infos, .description, .tracks {
+  display: block;
+  position: relative;
+  clear: both;
+}
+
+.description textarea {
+  display: block;
+  clear: both;
+  width: 100%;
+  height: 100px;
+}
+
+.clear {
+  clear: both;
+}

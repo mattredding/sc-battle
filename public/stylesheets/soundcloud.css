@@ -1,0 +1,38 @@
+.connect-with-soundcloud .connect {
+  text-indent: -9999px;
+  display: block;
+  width: 207px;
+  height: 25px;
+  background-image: url(http://connect.soundcloud.com/medium-connect-with-sc.png);
+}
+
+.connect-with-soundcloud .disconnect {
+  text-indent: -9999px;
+  width: 119px;
+  height: 25px;
+  background-image: url(http://connect.soundcloud.com/medium-disconnect.png);
+}
+
+.connect-with-soundcloud.large .connect {
+  width: 242px;   height: 29px; background-image: url(http://connect.soundcloud.com/larger-connect-with-sc.png);
+}
+.connect-with-soundcloud.large .disconnect {
+  width: 140px; height: 29px; background-image: url(http://connect.soundcloud.com/larger-disconnect.png);
+}
+.connect-with-soundcloud.small .connect {
+  width: 189px;   height: 21px; background-image: url(http://connect.soundcloud.com/small-connect-with-sc.png);
+}
+.connect-with-soundcloud.small .disconnect {
+  width: 109px; height: 21px; background-image: url(http://connect.soundcloud.com/small-disconnect.png);
+}
+
+
+
+
+.connect-with-soundcloud .current-user, .connect-with-soundcloud a.disconnect, .connect-with-soundcloud.connected a.connect {
+  display: none;
+}
+
+.connect-with-soundcloud.connected .current-user, .connect-with-soundcloud.connected a.disconnect {
+  display: block;
+}
