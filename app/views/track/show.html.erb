@@ -1,0 +1,10 @@
+<h1>Track#show</h1>
+
+<div class="tracks">
+  <b>Your submitted tracks</b>
+  <ul>
+    <% @tracks.each do |track| %>
+      <li><%= track.title %></li>
+	  <% end %>
+  </ul>
+</div>

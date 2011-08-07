@@ -10,7 +10,15 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20110806050129) do
+ActiveRecord::Schema.define(:version => 20110807045015) do
+
+  create_table "tracks", :force => true do |t|
+    t.integer  "soundcloud_track_id"
+    t.string   "title"
+    t.integer  "user_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
   create_table "users", :force => true do |t|
     t.integer  "soundcloud_uid"

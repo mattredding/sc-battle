@@ -1,4 +1,6 @@
 class User < ActiveRecord::Base
+  has_many :tracks
+
   def self.soundcloud_client(options={})
     options = {
       :client_id     => APP_CONFIG['SOUNDCLOUD_KEY'],

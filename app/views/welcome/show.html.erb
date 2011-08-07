@@ -24,7 +24,7 @@
   <b>Your 5 latest tracks</b>
   <ul>
     <% @tracks.each do |track| %>
-      <li><%= link_to track.title, track.permalink_url %></li>
+      <li><%= link_to track.title, "track/create?soundcloud_track_id=#{track.id}&title=#{CGI.escape(track.title)}" %><%= track.to_yaml %></li>
     <% end %>
   </ul>
 </div>
