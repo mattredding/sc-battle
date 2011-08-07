@@ -1,4 +1,10 @@
 ScBattle::Application.routes.draw do
+  get "battle/index"
+
+  get "battle/show"
+
+  get "battle/create"
+
   get "track/create"
 
   root :to => "home#index"

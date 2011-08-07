@@ -1,0 +1,10 @@
+<h1>Battle#index</h1>
+
+<div class="battles">
+  <b>All Battles</b>
+  <ul>
+    <% @battles.each do |battle| %>
+      <li><%= link_to "battle id: #{battle.id}", "/battle/show/#{battle.id}"%></li>
+    <% end %>
+  </ul>
+</div>
