@@ -1,0 +1,8 @@
+<div class="tracks">
+  <b>Submit a track to enter Battle: <%= @battle_id %></b>
+  <ul>
+    <% @tracks.each do |track| %>
+      <li><%= link_to track.title, "/track/create?soundcloud_track_id=#{track.id}&title=#{track.title}&battle_id=#{@battle_id}" %></li>
+    <% end %>
+  </ul>
+</div>

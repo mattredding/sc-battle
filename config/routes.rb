@@ -17,6 +17,8 @@ ScBattle::Application.routes.draw do
   match '/soundcloud/connected',  :to => 'soundcloud#connected',  :as => :soundcloud_connected
   match '/soundcloud/disconnect', :to => 'soundcloud#disconnect', :as => :soundcloud_disconnect
 
+  match '/track/create', :to => 'track#create', :as => :track_create
+
   # The priority is based upon order of creation:
   # first created -> highest priority.
 

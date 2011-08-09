@@ -4,8 +4,12 @@
 <div class="users">
   <b>Battles users:</b>
   <ul>
-    <% @battles_users.each do |battle_user| %>
-      <li><%= "User id: #{battle_user.id}" %></li>
+    <% @battle.tracks.each do |battle_track| %>
+      <li><%= " #{User.find_by_id( battle_track.user_id ).soundcloud_username} - #{battle_track.title}" %></li>
     <% end %>
   </ul>
+</div>
+
+<div class=" <%= "hidden" if @hide_join_button %>"">
+<%= link_to "Join this battle", "/track/new/#{@battle.id}"%>
 </div>
