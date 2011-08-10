@@ -1,0 +1,54 @@
+.sc-player{
+	background-color: #efefef;
+	-moz-border-radius: 5px; -webkit-border-radius: 5px;
+  height: 30px;
+	padding: 5px;
+	width: 100%;
+}
+
+/* Controls */
+
+.sc-controls{
+	background-color: #F50;
+	display: table-cell;
+	vertical-align: top;
+}
+
+.sc-controls, .sc-controls a{ width: 30px; height: 30px; border: 0; }
+
+.sc-controls a, .sc-player.playing .sc-controls a.sc-pause{ display: block; }
+
+
+.sc-controls a { color: transparent; background: url('/images/control.png') 0 0;}
+.sc-controls a:hover { background: url('/images/control.png') 30px 0;}
+.sc-controls a.sc-pause { background: url('/images/control.png') 0 0;}
+.sc-controls a.sc-pause:hover{ background: url('/images/control.png') 30px 0;}
+.sc-player.playing .sc-controls a.sc-pause{ background: url('/images/control.png') 0 30px;}
+.sc-player.playing .sc-controls a.sc-pause:hover{ background: url('/images/control.png') 30px 30px;}
+
+/* Scrubber */
+
+.sc-scrubber { display: table-cell; width: 100%; padding-left: 5px; }
+
+.sc-time-span, .sc-buffer, .sc-played, .sc-waveform-container, .sc-waveform-container img{ height: 30px; }
+
+.sc-time-span, .sc-waveform-container, .sc-waveform-container img{ width: 100%; }
+
+.sc-time-span{ background-color: #CCC; position: relative; }
+
+.sc-waveform-container, .sc-buffer, .sc-played{ position: absolute; top: 0; }
+
+.sc-buffer{
+	background-color: #959595;
+}
+
+.sc-played{
+	background-color: #39F;
+	background: -webkit-gradient(linear, 0% 100%, 0% 0%, from(#39F), color-stop(0.5, #74B9FF), to(#39F)) repeat-x, #39F;
+}
+
+/* Misc */
+
+.sc-player-engine-container{ width: 1px; height: 1px; position: fixed; }
+
+.hidden, .sc-artwork-list, .sc-info, .sc-info-toggle, .sc-trackslist, .sc-time-indicators, .sc-controls a.sc-pause, .sc-player.playing .sc-controls a.sc-play { display: none; }

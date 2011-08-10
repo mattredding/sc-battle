@@ -2,10 +2,12 @@
 <p>Battle id: <%= @battle.id %></p>
 
 <div class="users">
-  <b>Battles users:</b>
+  <b>Battles tracks:</b>
+	<% @battle_tracks %>
   <ul>
-    <% @battle.tracks.each do |battle_track| %>
-      <li><%= " #{User.find_by_id( battle_track.user_id ).soundcloud_username} - #{battle_track.title}" %></li>
+    <% @battle_tracks.each do |battle_track| %>
+			<%= battle_track.title %>
+		  <a href="<%= battle_track.permalink_url %>" class="sc-player"><%= battle_track.title %></a>
     <% end %>
   </ul>
 </div>
