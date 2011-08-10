@@ -10,7 +10,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20110808140934) do
+ActiveRecord::Schema.define(:version => 20110810145450) do
 
   create_table "battles", :force => true do |t|
     t.datetime "created_at"
@@ -37,6 +37,14 @@ ActiveRecord::Schema.define(:version => 20110808140934) do
     t.string   "soundcloud_access_token"
     t.string   "soundcloud_expires_at"
     t.string   "soundcloud_refresh_token"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "votes", :force => true do |t|
+    t.integer  "soundcloud_track_id"
+    t.integer  "user_id"
+    t.integer  "battle_id"
     t.datetime "created_at"
     t.datetime "updated_at"
   end

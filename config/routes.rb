@@ -1,4 +1,6 @@
 ScBattle::Application.routes.draw do
+  get "vote/cast"
+
   get "battle/index"
 
   get "battle/show"
@@ -18,6 +20,7 @@ ScBattle::Application.routes.draw do
   match '/soundcloud/disconnect', :to => 'soundcloud#disconnect', :as => :soundcloud_disconnect
 
   match '/track/create', :to => 'track#create', :as => :track_create
+  match '/vote/cast', :to => 'vote#cast', :as => :vote_cast
 
   # The priority is based upon order of creation:
   # first created -> highest priority.

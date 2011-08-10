@@ -1,17 +1,38 @@
 <h1>Battle#show</h1>
 <p>Battle id: <%= @battle.id %></p>
 
-<div class="users">
-  <b>Battles tracks:</b>
-	<% @battle_tracks %>
-  <ul>
-    <% @battle_tracks.each do |battle_track| %>
-			<%= battle_track.title %>
-		  <a href="<%= battle_track.permalink_url %>" class="sc-player"><%= battle_track.title %></a>
-    <% end %>
-  </ul>
+<div id="battle-tracks">
 </div>
 
-<div class=" <%= "hidden" if @hide_join_button %>"">
+<div class=" <%= "hidden" if @hide_join_button %>">
 <%= link_to "Join this battle", "/track/new/#{@battle.id}"%>
 </div>
+
+<script type="text/javascript">
+
+	<% @battle_tracks.each do |battle_track| %>
+
+		var trackContainer = $('<div/>');
+		
+		var voteDiv = $("<div/>")
+		voteDiv.text("Vote")
+		.bind('click', function(){
+			console.log("vote clicked ");
+			$(".your_vote").removeClass('your_vote');
+			$(this).addClass('your_vote');			
+			$.get('/vote/cast?soundcloud_track_id=<%= battle_track.id %>&battle_id=<%= @battle.id %>', function(response){
+				console.log("vote registered ");
+			})
+		})
+
+		var trackLink = $('<a/>');
+		trackLink.text('<%= battle_track.title %>')
+		.attr('href', '<%= battle_track.permalink_url %>')
+		.addClass('sc-player')
+
+		trackContainer.append(voteDiv, trackLink);
+		$('#battle-tracks').append(trackContainer);
+
+	<% end %>
+
+</script>
