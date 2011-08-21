@@ -10,7 +10,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20110821033045) do
+ActiveRecord::Schema.define(:version => 20110821144823) do
 
   create_table "battles", :force => true do |t|
     t.datetime "created_at"
@@ -19,7 +19,7 @@ ActiveRecord::Schema.define(:version => 20110821033045) do
 
   create_table "battles_users", :id => false, :force => true do |t|
     t.integer "battle_id"
-    t.integer "user_id"
+    t.integer "sc_user_id"
   end
 
   create_table "tracks", :force => true do |t|
@@ -29,6 +29,8 @@ ActiveRecord::Schema.define(:version => 20110821033045) do
     t.datetime "created_at"
     t.datetime "updated_at"
     t.integer  "battle_id"
+    t.string   "permalink"
+    t.string   "permalink_url"
   end
 
   create_table "users", :force => true do |t|

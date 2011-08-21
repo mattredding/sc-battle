@@ -1,6 +1,6 @@
 class User < ActiveRecord::Base
   has_many :tracks
-  # has_and_belongs_to_many :battles
+  has_many :battles, :through => :tracks
 
   def self.soundcloud_client(options={})
     options = {
