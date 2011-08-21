@@ -10,29 +10,39 @@
 
 <script type="text/javascript">
 
-	<% @battle_tracks.each do |battle_track| %>
+	<% @battle.tracks.each do |track| %>
+		<% soundcloud_track = soundcloud_track(track.soundcloud_track_id)%>
 
 		var trackContainer = $('<div/>');
-		
-		var voteDiv = $("<div/>")
-		voteDiv.text("Vote")
+
+		var votes = $('<span/>')
+		votes.text(' (Votes: <%=track.votes.size%>)')
+
+		var voteSpan = $("<span/>")
+		voteSpan.text("Vote")
+		<% if voted?(track.id) %>
+			voteSpan.addClass('your_vote')
+		<% end %>
+
 		.bind('click', function(){
 			console.log("vote clicked ");
 			$(".your_vote").removeClass('your_vote');
-			$(this).addClass('your_vote');			
-			$.get('/vote/cast?soundcloud_track_id=<%= battle_track.id %>&battle_id=<%= @battle.id %>', function(response){
+			var self = $(this);
+			$.get('/vote/cast?track_id=<%= track.id %>&battle_id=<%= @battle.id %>', function(response){
 				console.log("vote registered ");
+				self.addClass('your_vote');
+				// 	update vote counts
 			})
 		})
-
+	
 		var trackLink = $('<a/>');
-		trackLink.text('<%= battle_track.title %>')
-		.attr('href', '<%= battle_track.permalink_url %>')
+		trackLink.text('<%= soundcloud_track.title %>')
+		.attr('href', '<%= soundcloud_track.permalink_url %>')
 		.addClass('sc-player')
-
-		trackContainer.append(voteDiv, trackLink);
+	
+		trackContainer.append(voteSpan, votes, trackLink);
 		$('#battle-tracks').append(trackContainer);
-
+	
 	<% end %>
 
 </script>
