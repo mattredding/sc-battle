@@ -4,7 +4,7 @@
 <div id="battle-tracks">
 </div>
 
-<% unless is_contestant?(@battle.id) %>
+<% unless current_sc_user.is_contestant?(@battle.id) %>
 	<%= link_to "Join this battle", "/track/new/#{@battle.id}"%>
 <% end %>
 
@@ -19,7 +19,7 @@
 
 		var voteSpan = $("<span/>")
 		voteSpan.text("Vote")
-		<% if voted?(track.id) %>
+		<% if current_sc_user.voted_for?(track.id) %>
 			voteSpan.addClass('your_vote')
 		<% end %>
 

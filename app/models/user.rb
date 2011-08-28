@@ -30,7 +30,12 @@ class User < ActiveRecord::Base
         :soundcloud_expires_at    => client.expires_at,
       })
     end
-
     client
+  end
+  def voted_for?(track_id)
+    Track.find(track_id).votes.find(:first, :conditions => {:user_id => self[:id]}) ? true : false
+  end
+  def is_contestant?(battle_id)
+    Battle.find(battle_id).users.find(:first, :conditions => {:id => self[:id]}) ? true : false
   end
 end
