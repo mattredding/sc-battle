@@ -4,7 +4,7 @@
 <div id="battle-tracks">
 </div>
 
-<% unless current_sc_user.is_contestant?(@battle.id) %>
+<% if logged_in? && !current_sc_user.is_contestant?(@battle.id)  %>
 	<%= link_to "Join this battle", "/track/new/#{@battle.id}"%>
 <% end %>
 
@@ -12,36 +12,15 @@
 
 	<% @battle.tracks.each do |track| %>
 
-		var trackContainer = $('<div/>');
-
-		var votes = $('<span/>')
-		votes.text(' (Votes: <%=track.votes.size%>)')
-
-		var voteSpan = $("<span/>")
-		voteSpan.text("Vote")
-		<% if current_sc_user.voted_for?(track.id) %>
-			voteSpan.addClass('your_vote')
-		<% end %>
-
-		.bind('click', function(){
-			console.log("vote clicked ");
-			$(".your_vote").removeClass('your_vote');
-			var self = $(this);
-			$.get('/vote/cast?track_id=<%= track.id %>&battle_id=<%= @battle.id %>', function(response){
-				console.log("vote registered ");
-				self.addClass('your_vote');
-				// 	update vote counts
-			})
-		})
-	
-		var trackLink = $('<a/>');
-		trackLink.text('<%= track.title %>')
-		.attr('href', '<%= track.permalink_url %>')
-		.addClass('sc-player')
-	
-		trackContainer.append(voteSpan, votes, trackLink);
-		$('#battle-tracks').append(trackContainer);
-	
+		var battle_id = '<%=@battle.id%>'
+		var track_id = '<%=track.id%>'
+		var title = '<%=track.title%>'
+		var permalink_url = '<%=track.permalink_url%>'
+		var votes = '<%=track.votes.size.to_s%>'
+		var votedFor = '<%= !!logged_in? && current_sc_user.voted_for?(track.id) %>'
+		var newtrack = new Track(battle_id, track_id, title, permalink_url, votes, votedFor, $("#battle-tracks"));
+		console.log("newtrack ", newtrack);
+		console.log("newtrack ", newtrack.votes);
 	<% end %>
 
 </script>
